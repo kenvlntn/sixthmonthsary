@@ -147,3 +147,45 @@
 .go-to-gallery-button:hover {
     background-color: #7e0440; /* Darker shade when hovered */
 }
+
+@media only screen and (max-width: 600px) {
+  body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url('images/bg-mobile.png');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .envelope-wrapper > .envelope {
+      width: 90vw;
+  }
+
+  .envelope-wrapper > .envelope::before {
+      border-right: 45vw solid transparent;
+      border-left: 45vw solid transparent;
+  }
+
+  .envelope-wrapper > .envelope::after {
+      border-right: 45vw solid var(--envelope-cover);
+      border-left: 45vw solid var(--envelope-cover);
+  }
+
+  .envelope > .letter {
+      width: 55%;
+      right: 20%;
+  }
+
+  .go-to-gallery-button {
+      top: 780px; /* Adjust the position as needed */
+      padding: 15px 40px;
+      font-size: 18px;
+  }
+
+  .envelope > .letter > .text {
+      font-size: 9px; /* Adjust the font size as needed */
+  }
+}
+
